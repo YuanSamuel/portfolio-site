@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import Button from '@material-ui/core/Button';
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 
 const projects = {
@@ -29,23 +31,24 @@ export default function Projects() {
         // animate="show"
       >
         <ProjectDiv
-          photo='./dev_image.svg'
-          title='Personal Portfolio'
-          description='Contriubted to open-sourced personal portfolio template.'
-          tech={['Jekyll', 'HTML', 'SCSS', 'Static Site']}
+          photo='/petcode_image.png'
+          title='PetCode'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          tech={['Flutter', 'Firebase', 'GraphQL', 'Maps API']}
           links={[
             {
               type: 'GitHub',
-              link: 'https://github.com/MLH-Fellowship/portfolio-template',
+              link: 'https://github.com/petcodeapp',
             },
             {
               type: 'Launch',
-              link: 'https://mlh-fellowship.github.io/portfolio-template',
+              link: 'https://petcodeusa.com',
             },
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          photo='./dev_image.svg'
+          photo='/dev_image.svg'
           title='Sample Project'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -58,7 +61,7 @@ export default function Projects() {
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          photo='./dev_image.svg'
+          photo='/dev_image.svg'
           title='Sample Project 2'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -94,7 +97,7 @@ function ProjectDiv({ photo, title, description, tech, links }) {
 
   function getTechList(tech) {
     return tech.map((name, index) => (
-      <p key={name + index} className='tech-name'>
+      <p key={name + index} className='mr-5'>
         {name}
       </p>
     ));
@@ -113,19 +116,19 @@ function ProjectDiv({ photo, title, description, tech, links }) {
   return (
     <motion.div
       ref={ref}
-      className='w-4/5 rounded-md flex flex-row relative mt-4 mb-4 border'
+      className='w-4/5 rounded-md flex flex-row relative my-8'
       variants={item}
       initial='hidden'
       animate={controls}
     >
       <motion.img
         src={photo}
-        className='w-2/5 overflow-hidden rounded-md object-cover'
+        className='w-2/6 max-w-2/6 overflow-hidden rounded-md object-cover mr-16'
         whileHover={{ scale: 1.05 }}
       />
-      <div className='project-info'>
-        <h2 className='project-title'>{title}</h2>
-        <p className='project-description'>{description}</p>
+      <div className='text-left mt-4'>
+        <h2 className='text-2xl mb-6'>{title}</h2>
+        <p className='text-md mb-6'>{description}</p>
         {tech ? (
           <ProjectTechnologies>{getTechList(tech)}</ProjectTechnologies>
         ) : (
@@ -142,21 +145,33 @@ function ProjectDiv({ photo, title, description, tech, links }) {
 }
 
 function ProjectTechnologies({ children }) {
-  return <div className='project-tech'>{children}</div>;
+  return <div className='flex flex-row mb-6'>{children}</div>;
 }
 
 function ProjectLinks({ children }) {
-  return <div className='project-links'>{children}</div>;
+  return <div className='flex flex-row'>{children}</div>;
 }
 
 function ProjectLink({ type, link }) {
   function getIcon() {
     if (type === 'GitHub') {
-      return GitHubLogo;
+      return '/github_icon.png';
     } else if (type === 'Launch') {
-      return LaunchIcon;
+      return '/launch_icon.svg';
     }
   }
 
-  return <div className='project-link'></div>;
+  return (
+    <div className='mr-5'>
+      <Button
+        variant='outlined'
+        color='default'
+        onClick={() => window.open(link, '_blank')}
+        size='small'
+      >
+        <Image src={getIcon()} width={30} height={30} />
+        &nbsp;&nbsp;{type}
+      </Button>
+    </div>
+  );
 }
