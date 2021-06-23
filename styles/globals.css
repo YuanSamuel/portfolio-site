@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: 'League Spartan Variable';
+    src: url('./fonts/LeagueSpartan-VF.woff2') format('woff2-variations');
+    font-weight: 200 900;
+  }
+
+@tailwind utilities;

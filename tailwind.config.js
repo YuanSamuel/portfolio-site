@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       zIndex: {
         '-1': '-1',
+      },
+      fontFamily: {
+        'sans': ['League Spartan Variable']
       }
     },
   },

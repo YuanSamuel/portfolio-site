@@ -16,8 +16,8 @@ export default function Landing() {
         <Image src='/dev_image.svg' alt='' height={300} width={300} />
       </div>
       <div className='flex flex-col justify-center items-center md:items-start md:h-full'>
-        <h1 className='text-5xl m-0 leading-normal'>Hi, I&apos;m Samuel</h1>
-        <p className='text-xl'>I&apos;m a software developer based in Texas</p>
+        <h1 className='text-6xl m-0 leading-normal font-medium'>Hi, I&apos;m Samuel</h1>
+        <p className='text-2xl'>I&apos;m a software developer based in Texas</p>
       </div>
     </div>
   );
