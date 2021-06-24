@@ -53,8 +53,8 @@ export default function Projects() {
           tech={['Flutter', 'Firebase', 'MobX']}
           links={[
             {
-              type: 'Launch',
-              link: 'https://devpost.com/software/vscode-github-projects',
+              type: 'Devpost',
+              link: 'https://devpost.com/software/capsulemap',
             },
           ]}
         ></ProjectDiv>
@@ -156,6 +156,8 @@ function ProjectLink({ type, link }) {
       return '/github_icon.png';
     } else if (type === 'Launch') {
       return '/launch_icon.svg';
+    } else if (type === 'Devpost') {
+      return '/devpost_icon.png';
     }
   }
 
