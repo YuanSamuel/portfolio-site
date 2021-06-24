@@ -47,7 +47,6 @@ export default function Projects() {
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           photo='/capsule_map_image.png'
           title='CapsuleMap'
           description='CapsuleMap is a lifestyle app aimed at keeping users mentally and physically healthy. At a desired place, users may choose to create a capsule, adding a title, memo, photos, and/or videos that reflect their sentiment towards the current location. After creating it, users can choose to share the capsule with friends. After the capsule has been sent, it will appear in the "sent" tab in the user&apos;s capsules page, making it easy to keep track of personal capsules.'
@@ -114,7 +113,7 @@ function ProjectDiv({ photo, title, description, tech, links }) {
   return (
     <motion.div
       ref={ref}
-      className='w-4/5 rounded-md flex flex-row my-8'
+      className='w-4/5 rounded-md flex flex-col md:flex-row my-8'
       variants={item}
       initial='hidden'
       animate={controls}
@@ -122,7 +121,7 @@ function ProjectDiv({ photo, title, description, tech, links }) {
       <motion.img
         src={photo}
         whileHover={{ scale: 1.05 }}
-        className='overflow-hidden rounded-md object-cover min-w-40vh max-w-40vh max-h-30vh mr-16'
+        className='overflow-hidden rounded-md object-cover md:min-w-30vh md:max-w-30vh lg:min-w-40vh lg:max-w-40vh max-h-30vh mr-16'
         alt=''
       />
       <div className='text-left mt-4'>
