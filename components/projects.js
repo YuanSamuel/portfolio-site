@@ -33,8 +33,7 @@ export default function Projects() {
         <ProjectDiv
           photo='/petcode_image.png'
           title='PetCode'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          description="Developed the mobile app. PetCode is a pet management system that takes the stress out of pet ownership by allowing owners to centralize their pet's data. With PetCode, managing pet's health, social needs, and safety has never been easier."
           tech={['Flutter', 'Firebase', 'GraphQL', 'Maps API']}
           links={[
             {
@@ -48,32 +47,31 @@ export default function Projects() {
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          photo='/dev_image.svg'
-          title='Sample Project'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          tech={['React Native', 'Firebase', 'Mobile App']}
+          photo='/capsule_map_image.png'
+          title='CapsuleMap'
+          description='CapsuleMap is a lifestyle app aimed at keeping users mentally and physically healthy. At a desired place, users may choose to create a capsule, adding a title, memo, photos, and/or videos that reflect their sentiment towards the current location. After creating it, users can choose to share the capsule with friends. After the capsule has been sent, it will appear in the "sent" tab in the user&apos;s capsules page, making it easy to keep track of personal capsules.'
+          tech={['Flutter', 'Firebase', 'MobX']}
           links={[
             {
-              type: 'GitHub',
-              link: 'https://github.com',
+              type: 'Launch',
+              link: 'https://devpost.com/software/vscode-github-projects',
             },
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          photo='/dev_image.svg'
-          title='Sample Project 2'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          tech={['Python', 'Django', 'HTML']}
+          photo='/vs_code_github_projects_image.jpg'
+          title='VS Code GitHub Projects'
+          description="A VS Code extension that brings GitHub's projects into VS Code."
+          tech={['Svelte', 'VS Code API', 'GraphQL', 'GitHub API']}
           links={[
             {
               type: 'GitHub',
-              link: 'https://github.com/django/django',
+              link: 'https://github.com/MLH-Fellowship/vscode-github-projects',
             },
             {
               type: 'Launch',
-              link: 'https://www.djangoproject.com/',
+              link: 'https://marketplace.visualstudio.com/items?itemName=Pod212.vscode-github-projects',
             },
           ]}
         ></ProjectDiv>
@@ -116,18 +114,19 @@ function ProjectDiv({ photo, title, description, tech, links }) {
   return (
     <motion.div
       ref={ref}
-      className='w-4/5 rounded-md flex flex-row relative my-8'
+      className='w-4/5 rounded-md flex flex-row my-8'
       variants={item}
       initial='hidden'
       animate={controls}
     >
       <motion.img
         src={photo}
-        className='w-2/6 max-w-2/6 overflow-hidden rounded-md object-cover mr-16'
         whileHover={{ scale: 1.05 }}
+        className='overflow-hidden rounded-md object-cover min-w-40vh max-w-40vh max-h-30vh mr-16'
+        alt=''
       />
       <div className='text-left mt-4'>
-        <h2 className='text-2xl mb-6'>{title}</h2>
+        <h2 className='text-2xl mb-6 font-medium'>{title}</h2>
         <p className='text-md mb-6'>{description}</p>
         {tech ? (
           <ProjectTechnologies>{getTechList(tech)}</ProjectTechnologies>
