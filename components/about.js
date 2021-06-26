@@ -2,20 +2,20 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div className='flex flex-col justify-start items-center px-20 w-9/12 min-h-screen'>
+    <div className='flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen'>
       <div className='mt-10'>
         <h1 className='text-5xl m-0 leading-normal underline'>About</h1>
       </div>
-      <div className='flex flex-row justify-start items-start w-full mt-10'>
+      <div className='flex flex-col-reverse md:flex-row justify-start items-center md:items-start w-full mt-10'>
         <Image
           src='/profile_image.jpeg'
           alt='Profile Photo'
           width={300}
           height={300}
-          className='rounded-lg flex flex-none'
+          className='rounded-lg flex flex-auto border'
         />
-        <div className='ml-14 flex flex-1'>
-          <p className='text-lg'>
+        <div className='flex flex-auto mb-5 md:m-0 md:ml-14 md:w-7/12'>
+          <p className='md:text-lg'>
             Hi! My name is Samuel and I'm passionate about turning ideas into
             reality through software. Currently, I'm a rising{' '}
             <a
@@ -58,8 +58,8 @@ export default function About() {
         </div>
       </div>
       <div className='w-full mt-7 ml-7'>
-        <h2 className='text-2xl text-left '>I've Worked With</h2>
-        <div className='flex flex-row mt-5'>
+        <h2 className='text-xl md:text-2xl text-left'>I've Worked With</h2>
+        <div className='flex flex-row mt-5 mb-5'>
           <div className='mr-5'>
             <Image
               src='/flutter_logo.svg'
