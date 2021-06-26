@@ -25,6 +25,7 @@ module.exports = {
       height: {
         '30vh': '30vh',
         '40vh': '40vh',
+        '80vh': '80vh',
       },
       maxHeight: {
         '30vh': '30vh',

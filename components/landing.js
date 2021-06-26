@@ -2,16 +2,7 @@ import Image from 'next/image';
 
 export default function Landing() {
   return (
-    <div className='flex flex-col items-center justify-center md:flex-row md:justify-around md:px-5 w-full h-screen'>
-      <div className='absolute h-screen w-screen overflow-hidden -z-1'>
-        <Image
-          alt=''
-          src='/background.png'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </div>
+    <div className='flex flex-col items-center justify-center md:flex-row md:justify-around md:px-5 w-full h-screen bg-gradient-to-r from-green-200 to-blue-200'>
       <div className='flex mb-10 md:m-0'>
         <Image src='/dev_image.svg' alt='' height={300} width={300} />
       </div>
