@@ -9,7 +9,7 @@ export default function About() {
       <div className='flex flex-col-reverse md:flex-row justify-start items-center md:items-start w-full mt-10'>
         <Image
           src='/profile_image.jpeg'
-          alt='Profile Photo'
+          alt='Samuel Yuan'
           width={300}
           height={300}
           className='rounded-lg flex flex-auto border'

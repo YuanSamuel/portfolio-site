@@ -160,7 +160,6 @@ function ProjectLink({ type, link }) {
       return '/devpost_icon.png';
     }
   }
-
   return (
     <div className='mr-5'>
       <Button
@@ -169,7 +168,7 @@ function ProjectLink({ type, link }) {
         onClick={() => window.open(link, '_blank')}
         size='small'
       >
-        <Image src={getIcon()} width={30} height={30} />
+        <Image src={getIcon()} width={30} height={30} alt={type + ' Icon'}/>
         &nbsp;&nbsp;{type}
       </Button>
     </div>

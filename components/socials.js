@@ -7,7 +7,7 @@ export default function Socials() {
         <a href='https://www.linkedin.com/in/yuansamuel/' target='_blank'>
           <Image
             src='/linkedin_icon.png'
-            alt=''
+            alt='LinkedIn Icon'
             height={30}
             width={30}
             className='object-contain'
@@ -18,7 +18,7 @@ export default function Socials() {
         <a href='https://github.com/YuanSamuel/' target='_blank'>
           <Image
             src='/github_icon.png'
-            alt=''
+            alt='GitHub Icon'
             height={30}
             width={30}
             className='object-contain'
@@ -29,7 +29,7 @@ export default function Socials() {
         <a href='mailto:syuan@utexas.edu' target='_blank'>
           <Image
             src='/email_icon.svg'
-            alt=''
+            alt='Email Icon'
             height={30}
             width={30}
             className='object-contain'
@@ -40,7 +40,7 @@ export default function Socials() {
         <a href='https://www.instagram.com/samuel.yuan17/' target='_blank'>
           <Image
             src='/instagram_icon.png'
-            alt=''
+            alt='Instagram Icon'
             height={30}
             width={30}
             className='object-contain'
