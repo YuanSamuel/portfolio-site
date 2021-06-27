@@ -122,7 +122,7 @@ function ProjectDiv({ photo, title, description, tech, links }) {
         src={photo}
         whileHover={{ scale: 1.05 }}
         className='overflow-hidden rounded-md object-cover md:min-w-30vh md:max-w-30vh lg:min-w-40vh lg:max-w-40vh max-h-30vh mr-16'
-        alt=''
+        alt='Project Image'
       />
       <div className='text-left mt-4'>
         <h2 className='text-2xl mb-6 font-medium'>{title}</h2>
@@ -168,7 +168,7 @@ function ProjectLink({ type, link }) {
         onClick={() => window.open(link, '_blank')}
         size='small'
       >
-        <Image src={getIcon()} width={30} height={30} alt={type + ' Icon'}/>
+        <Image src={getIcon()} width={30} height={30} alt={type + ' Icon'} />
         &nbsp;&nbsp;{type}
       </Button>
     </div>

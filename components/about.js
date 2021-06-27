@@ -22,6 +22,7 @@ export default function About() {
               href='https://csb.utexas.edu/'
               target='_blank'
               className='text-blue-600'
+              rel='noreferrer'
             >
               Texas CSB Honors
             </a>{' '}
@@ -35,6 +36,7 @@ export default function About() {
               href='https://petcodeusa.com/'
               target='_blank'
               className='text-blue-600'
+              rel='noreferrer'
             >
               PetCode
             </a>{' '}
@@ -43,6 +45,7 @@ export default function About() {
               href='https://fellowship.mlh.io/'
               target='_blank'
               className='text-blue-600'
+              rel='noreferrer'
             >
               MLH Fellowship
             </a>
