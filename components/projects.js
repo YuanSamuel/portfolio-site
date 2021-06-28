@@ -31,7 +31,7 @@ export default function Projects() {
         // animate="show"
       >
         <ProjectDiv
-          photo='/petcode_image.png'
+          photo='https://ik.imagekit.io/samuelyuan/petcode_image_rsFipYIpj.png'
           title='PetCode'
           description="Developed the mobile app. PetCode is a pet management system that takes the stress out of pet ownership by allowing owners to centralize their pet's data. With PetCode, managing pet's health, social needs, and safety has never been easier."
           tech={['Flutter', 'Firebase', 'GraphQL', 'Maps API']}
@@ -47,7 +47,7 @@ export default function Projects() {
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          photo='/capsule_map_image.png'
+          photo='https://ik.imagekit.io/samuelyuan/capsule_map_image_XK4JUfZIu.png'
           title='CapsuleMap'
           description='CapsuleMap is a lifestyle app aimed at keeping users mentally and physically healthy. At a desired place, users may choose to create a capsule, adding a title, memo, photos, and/or videos that reflect their sentiment towards the current location. After creating it, users can choose to share the capsule with friends. After the capsule has been sent, it will appear in the "sent" tab in the user&apos;s capsules page, making it easy to keep track of personal capsules.'
           tech={['Flutter', 'Firebase', 'MobX']}
@@ -59,7 +59,7 @@ export default function Projects() {
           ]}
         ></ProjectDiv>
         <ProjectDiv
-          photo='/vs_code_github_projects_image.jpg'
+          photo='https://ik.imagekit.io/samuelyuan/vs_code_github_projects_image_c0zTLqDm8.jpg'
           title='VS Code GitHub Projects'
           description="A VS Code extension that brings GitHub's projects into VS Code."
           tech={['Svelte', 'VS Code API', 'GraphQL', 'GitHub API']}
