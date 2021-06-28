@@ -1,4 +1,8 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
@@ -8,7 +12,7 @@ module.exports = {
         '-1': '-1',
       },
       fontFamily: {
-        'sans': ['League Spartan Variable'],
+        sans: ['League Spartan Variable'],
       },
       width: {
         '30vh': '30vh',
@@ -40,5 +44,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
