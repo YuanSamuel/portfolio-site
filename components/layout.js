@@ -9,9 +9,9 @@ export default function Layout({ children, pageTitle }) {
         <title>{pageTitle}</title>
       </Head>
       <div className='flex flex-col min-h-screen'>
-        <header className='w-full h-16 border-b border-blue-400 flex items-center justify-center'>
+        <header className='w-full h-16 border-b border-blue-500 flex items-center justify-center'>
           <div className='w-11/12 md:w-full max-w-5xl flex flex-row justify-between mx-8'>
-            <div className='text-2xl border-blue-400'>
+            <div className='text-2xl border-blue-500'>
               <ActiveLink href='/blog'>
                 <a>Samuel Yuan's Blog</a>
               </ActiveLink>
@@ -22,7 +22,7 @@ export default function Layout({ children, pageTitle }) {
         <main className='w-11/12 md:w-full max-w-5xl mx-auto my-8 flex-grow px-8'>
           {children}
         </main>
-        <footer className='flex flex-col items-center w-full h-16 border-t border-blue-400'>
+        <footer className='flex flex-col items-center w-full h-16 border-t border-blue-500 bg-gray-100'>
           <div className='w-11/12 md:w-full max-w-3xl m-auto flex flex-row items-center justify-center'>
             Developed with 🔌
             <a className='pl-8 text-blue-500' href='mailto:syuan@utexas.edu'>
@@ -38,11 +38,11 @@ export default function Layout({ children, pageTitle }) {
 function AppNav() {
   return (
     <nav className='text-2xl text-gray-600'>
-      <ActiveLink href='/' activeClassName='text-blue-400'>
-        <a className='hover:text-blue-400 mr-8'>Home</a>
+      <ActiveLink href='/' activeClassName='text-blue-500'>
+        <a className='hover:text-blue-500 mr-8'>Home</a>
       </ActiveLink>
-      <ActiveLink href='/blog' activeClassName='text-blue-400'>
-        <a className='hover:text-blue-400'>Blog</a>
+      <ActiveLink href='/blog' activeClassName='text-blue-500'>
+        <a className='hover:text-blue-500'>Blog</a>
       </ActiveLink>
     </nav>
   );
