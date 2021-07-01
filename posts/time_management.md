@@ -22,7 +22,7 @@ In addition to all this, I can be aware of Parkinson's Law—that is, the idea t
 
 ### Time Spent Well
 
-Finally, once have effective time management sorted out is and we put in hours at work, how should we track it and ensure we're compensated fairly for our time? Well, I'd recommend checking out [TimeClockGo](https://www.timeclockgo.com ), software to track pay schedules and employees' time at work. They have an easy-to-use, affordable solution that allows for companies to track expenses, time off, and team expenses and time entries. After employees clock in or out with a click, businesses can quickly generate custom reports to fit their needs. With their mobile app, you can take managing employee time on the go, making things easier and more accessible than before.
+Finally, once effective time management is sorted out and we put in hours at work, how should we track it and ensure we're compensated fairly for our time? Well, I'd recommend checking out [TimeClockGo](https://www.timeclockgo.com ), software to track pay schedules and employees' time at work. They have an easy-to-use, affordable solution that allows for companies to track expenses, time off, and team expenses and time entries. After employees clock in or out with a click, businesses can quickly generate custom reports to fit their needs. With their mobile app, you can take managing employee time on the go, making things easier and more accessible than before.
 
 [!["Time Clock Go Overview"](https://www.timeclockgo.com/wp-content/uploads/2021/01/free-time-tracking-software.png)](https://www.timeclockgo.com/)
 
