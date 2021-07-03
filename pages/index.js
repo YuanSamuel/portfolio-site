@@ -9,7 +9,7 @@ export default function Home() {
     <div className='flex flex-col justify-center'>
       <Head>
         <title>Samuel Yuan</title>
-        <meta name='description' content='Personal portfolio for Samuel Yuan' />
+        <meta name='description' content="Samuel Yuan's Portfolio Site" />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Socials />
