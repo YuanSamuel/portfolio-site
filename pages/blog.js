@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Blog({ posts }) {
   return (
-    <Layout pageTitle='My Blog'>
+    <Layout pageTitle="Samuel Yuan's Blog" pageDescription="A collection of blog posts, essays, and thoughts by Samuel Yuan">
       <h1 className='text-2xl font-semibold'>Blog Posts</h1>
       <PostsList posts={posts} />
     </Layout>

@@ -10,7 +10,7 @@ export default function Post({ frontmatter, body }) {
   if (!frontmatter) return <></>;
 
   return (
-    <Layout pageTitle={frontmatter.title}>
+    <Layout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
       <div className='w-full'>
         <article className='prose max-w-none'>
           <h1>{frontmatter.title}</h1>
