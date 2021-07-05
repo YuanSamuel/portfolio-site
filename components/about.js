@@ -53,9 +53,9 @@ export default function About() {
             and meeting some amazing people.
             <br />
             <br />
-            Finally, I love working with others, competing with friends in 10+
-            hackathons, founding a software development club at my high school,
-            and starting a volunteer program at local junior highs to introduce
+            Finally, I love working with others—I've competed with friends in 10+
+            hackathons, founded a software development club at my high school,
+            and started a volunteer program at local junior highs to introduce
             younger students to programming.
           </p>
         </div>
