@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Landing from '../components/landing';
 import About from '../components/about';
 import Projects from '../components/projects';
-import Socials from '../components/socials';
 
 export default function Home() {
   return (

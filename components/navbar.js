@@ -1,8 +1,24 @@
 export default function NavBar() {
   return (
     <nav className="absolute top-6 right-8 flex items-center font-cousine text-lg">
-      <p className='mr-14'>01. About</p>
-      <p className='mr-14'>02. Projects</p>
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          const anchor = document.querySelector("#about");
+          anchor.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <p className="mr-14">01. About</p>
+      </div>
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          const anchor = document.querySelector("#projects");
+          anchor.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <p className="mr-14">02. Projects</p>
+      </div>
       <p>03. Contact</p>
     </nav>
   );

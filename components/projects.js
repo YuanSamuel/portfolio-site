@@ -20,8 +20,11 @@ const item = {
 
 export default function Projects() {
   return (
-    <div className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen">
-      <div className="mt-40 w-full flex flex-row items-center">
+    <div
+      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen"
+      id="projects"
+    >
+      <div className="mt-20 w-full flex flex-row items-center">
         <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
           Projects
         </h1>
