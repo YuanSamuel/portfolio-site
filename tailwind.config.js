@@ -48,6 +48,9 @@ module.exports = {
       backgroundImage: theme => ({
         'landing-gradient': "url('/landing_gradient.svg')"
       }),
+      fontSize: {
+        '2.5xl': '1.6rem'
+      }
     },
     fontFamily: {
       cousine: ["Cousine"],
