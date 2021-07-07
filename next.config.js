@@ -12,5 +12,8 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ["ik.imagekit.io"],
+  },
 };
 module.exports = nextConfig;

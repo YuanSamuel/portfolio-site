@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen">
-      <div className="mt-24 w-full flex flex-row items-center">
+    <div className="flex flex-col justify-start items-center px-20 lg:w-10/12">
+      <div className="mt-40 w-full flex flex-row items-center">
         <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
           About
         </h1>

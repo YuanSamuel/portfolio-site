@@ -20,24 +20,27 @@ const item = {
 
 export default function Projects() {
   return (
-    <div className="flex flex-col justify-start items-center px-20 w-full min-h-screen bg-blue-50">
-      <div className="mt-10">
-        <h1 className="text-5xl m-0 leading-normal underline">Projects</h1>
+    <div className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen">
+      <div className="mt-40 w-full flex flex-row items-center">
+        <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
+          Projects
+        </h1>
+        <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
       <motion.div
-        className="flex flex-col justify-start items-center min-h-screen"
+        className="flex flex-col justify-start items-center min-h-screen px-8"
         // variants={projects}
         // initial="hidden"
         // animate="show"
       >
         <ProjectDiv
-          photo="https://ik.imagekit.io/samuelyuan/petcode_image_rsFipYIpj.png"
+          photo="https://ik.imagekit.io/samuelyuan/petcode_image_X438InxYo.png"
           title="PetCode"
           description={[
             "PetCode is a pet management system that takes the stress out of pet ownership by allowing owners to centralize their pet's data. With PetCode, managing pet's health, social needs, and safety has never been easier.",
-            <br/>,
-            <br/>,
-            "I developed the mobile app, focusing on integrating Firebase, our GraphQL API, and in app purchases for both iOS and Android."
+            <br />,
+            <br />,
+            "I developed the mobile app, focusing on integrating Firebase, our GraphQL API, and in app purchases for both iOS and Android.",
           ]}
           tech={["Flutter", "Firebase", "GraphQL", "Maps API"]}
           links={[
@@ -50,6 +53,8 @@ export default function Projects() {
               link: "https://petcodeusa.com",
             },
           ]}
+          colorFrom="78,84,200"
+          colorTo="143,148,251"
         ></ProjectDiv>
         <ProjectDiv
           photo="https://ik.imagekit.io/samuelyuan/capsule_map_image_XK4JUfZIu.png"
@@ -58,10 +63,12 @@ export default function Projects() {
           tech={["Flutter", "Firebase", "MobX"]}
           links={[
             {
-              type: "Devpost",
+              type: "Launch",
               link: "https://devpost.com/software/capsulemap",
             },
           ]}
+          colorFrom="0,130,200"
+          colorTo="102,125,182"
         ></ProjectDiv>
         <ProjectDiv
           photo="https://ik.imagekit.io/samuelyuan/vs_code_github_projects_image_c0zTLqDm8.jpg"
@@ -78,13 +85,23 @@ export default function Projects() {
               link: "https://marketplace.visualstudio.com/items?itemName=Pod212.vscode-github-projects",
             },
           ]}
+          colorFrom="74,194,154"
+          colorTo="189,255,243"
         ></ProjectDiv>
       </motion.div>
     </div>
   );
 }
 
-function ProjectDiv({ photo, title, description, tech, links }) {
+function ProjectDiv({
+  photo,
+  title,
+  description,
+  tech,
+  links,
+  colorFrom,
+  colorTo,
+}) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -99,7 +116,7 @@ function ProjectDiv({ photo, title, description, tech, links }) {
 
   function getTechList(tech) {
     return tech.map((name, index) => (
-      <p key={name + index} className="mr-5">
+      <p key={name + index} className="mr-5 text-white">
         {name}
       </p>
     ));
@@ -118,31 +135,37 @@ function ProjectDiv({ photo, title, description, tech, links }) {
   return (
     <motion.div
       ref={ref}
-      className="w-4/5 rounded-md flex flex-col md:flex-row my-8"
+      className="w-full rounded-xl flex flex-col md:flex-row md:justify-between my-8 text-white max-h-76"
+      style={{
+        background: `linear-gradient(90deg, rgba(${colorFrom},1) 0%, rgba(${colorTo},0.33) 100%);`,
+      }}
       variants={item}
       initial="hidden"
       animate={controls}
     >
-      <motion.img
-        src={photo}
-        whileHover={{ scale: 1.05 }}
-        className="overflow-hidden rounded-md object-cover md:min-w-30vh md:max-w-30vh lg:min-w-40vh lg:max-w-40vh max-h-30vh mr-16"
-        alt="Project Image"
-      />
-      <div className="text-left mt-4">
-        <h2 className="text-2xl mb-6 font-medium">{title}</h2>
-        <p className="text-md mb-6 whitespace-pre-wrap">{description}</p>
+      <div className="text-left my-8 mx-8 w-full items-center">
+        <div className="flex flex-row justify-between">
+          <h2 className="text-2xl mb-6">{title}</h2>
+          {links ? (
+            <ProjectLinks>{getLinksList(links)}</ProjectLinks>
+          ) : (
+            <div></div>
+          )}
+        </div>
+        <p className="text-md mb-6 whitespace-pre-wrap font-light">
+          {description}
+        </p>
         {tech ? (
           <ProjectTechnologies>{getTechList(tech)}</ProjectTechnologies>
         ) : (
           <div></div>
         )}
-        {links ? (
-          <ProjectLinks>{getLinksList(links)}</ProjectLinks>
-        ) : (
-          <div></div>
-        )}
       </div>
+      <img
+        src={photo}
+        className="rounded-md object-cover max-h-full max-w-full -z-1"
+        alt="Project Image"
+      />
     </motion.div>
   );
 }
@@ -158,24 +181,16 @@ function ProjectLinks({ children }) {
 function ProjectLink({ type, link }) {
   function getIcon() {
     if (type === "GitHub") {
-      return "/github_icon.png";
+      return "/github_icon_light.png";
     } else if (type === "Launch") {
-      return "/launch_icon.svg";
-    } else if (type === "Devpost") {
-      return "/devpost_icon.png";
+      return "/launch_icon_light.svg";
     }
   }
   return (
     <div className="mr-5">
-      <Button
-        variant="outlined"
-        color="default"
-        onClick={() => window.open(link, "_blank")}
-        size="small"
-      >
+      <a href={link} target="_blank" rel="noreferrer">
         <Image src={getIcon()} width={30} height={30} alt={type + " Icon"} />
-        &nbsp;&nbsp;{type}
-      </Button>
+      </a>
     </div>
   );
 }
