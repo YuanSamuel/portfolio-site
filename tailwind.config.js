@@ -13,7 +13,7 @@ module.exports = {
         "-1": "-1",
       },
       fontFamily: {
-        sans: ["League Spartan Variable"],
+        sans: ["Montserrat", "League Spartan Variable"],
       },
       width: {
         "30vh": "30vh",
@@ -26,13 +26,13 @@ module.exports = {
       maxWidth: {
         "30vh": "30vh",
         "40vh": "40vh",
-        "screen": "100vw"
+        screen: "100vw",
       },
       height: {
         "30vh": "30vh",
         "40vh": "40vh",
         "80vh": "80vh",
-        "screen": "100vh"
+        screen: "100vh",
       },
       maxHeight: {
         "30vh": "30vh",
@@ -43,14 +43,19 @@ module.exports = {
         "40vh": "40vh",
       },
       borderWidth: {
-        "40vh": "40vh"
+        1: "1px",
+        "40vh": "40vh",
       },
-      backgroundImage: theme => ({
-        'landing-gradient': "url('/landing_gradient.svg')"
+      backgroundImage: (theme) => ({
+        "landing-gradient": "url('/landing_gradient.svg')",
       }),
       fontSize: {
-        '2.5xl': '1.6rem'
-      }
+        "2.5xl": "1.6rem",
+      },
+      gradientColorStops: {
+        aboutOrange: "#F7971E",
+        aboutYellow: "#FFD200",
+      },
     },
     fontFamily: {
       cousine: ["Cousine"],

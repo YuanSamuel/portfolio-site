@@ -7,7 +7,7 @@ export default function Landing() {
     <div className="w-full h-screen">
       <NavBar />
       <div
-        className="absolute h-screen w-screen overflow-hidden -z-1 bg-gradient-to-br from-green-300 to-blue-300"
+        className="absolute h-screen w-full overflow-hidden -z-1 bg-gradient-to-br from-green-300 to-blue-300"
         style={{ clipPath: "polygon(0 0, 33% 0, 60% 100%, 0% 100%)" }}
       ></div>
       <div className="flex flex-col items-center justify-center md:flex-row md:px-5 w-full h-screen">

@@ -14,6 +14,7 @@ export default function Home() {
       </Head>
       <main className='flex flex-col items-center justify-center w-full'>
         <Landing />
+        <About />
       </main>
     </div>
   );
