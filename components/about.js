@@ -110,6 +110,15 @@ export default function About() {
               className="mr-10"
             />
           </div>
+          <div className="mr-5">
+            <Image
+              src="/figma_logo.svg"
+              alt="Figma Logo"
+              width={100}
+              height={100}
+              className="mr-10"
+            />
+          </div>
         </div>
       </div>
     </div>

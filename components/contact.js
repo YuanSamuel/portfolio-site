@@ -7,13 +7,17 @@ export default function Contact() {
       id="contact"
     >
       <div className="mt-20 w-full flex flex-row items-center">
-        <div className="border-b-1 border-gray-400 h-0 w-full flex flex-shrink"> </div>
+        <div className="border-b-1 border-gray-400 h-0 w-full flex flex-shrink">
+          {" "}
+        </div>
         <h1 className="text-5xl m-0 leading-normal font-light text-left mx-8 flex flex-none">
           Get In Touch
         </h1>
-        <div className="border-b-1 border-gray-400 h-0 w-full flex flex-shrink"> </div>
+        <div className="border-b-1 border-gray-400 h-0 w-full flex flex-shrink">
+          {" "}
+        </div>
       </div>
-      <div className="flex flex-row items-center justify-center mt-6">
+      <div className="flex flex-row items-center justify-center mt-8">
         <a
           href="https://github.com/YuanSamuel/"
           target="_blank"
@@ -23,8 +27,8 @@ export default function Contact() {
           <Image
             src="/github_icon_dark.png"
             alt="GitHub Icon"
-            height={50}
-            width={50}
+            height={45}
+            width={45}
             className="object-contain"
           />
         </a>
@@ -37,8 +41,8 @@ export default function Contact() {
           <Image
             src="/devpost_icon.png"
             alt="Devpost Icon"
-            height={50}
-            width={50}
+            height={45}
+            width={45}
             className="object-contain"
           />
         </a>
@@ -51,8 +55,8 @@ export default function Contact() {
           <Image
             src="/email_icon.svg"
             alt="Email Icon"
-            height={50}
-            width={50}
+            height={45}
+            width={45}
             className="object-contain"
           />
         </a>
@@ -65,20 +69,20 @@ export default function Contact() {
           <Image
             src="/instagram_icon.png"
             alt="Instagram Icon"
-            height={50}
-            width={50}
+            height={45}
+            width={45}
             className="object-contain"
           />
         </a>
       </div>
       <a
-          href="mailto:syuan@utexas.edu"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6"
-        >
-          <h2 className="text-2xl">syuan@utexas.edu</h2>
-        </a>
+        href="mailto:syuan@utexas.edu"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-6"
+      >
+        <h2 className="text-2xl">syuan@utexas.edu</h2>
+      </a>
     </div>
   );
 }

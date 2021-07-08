@@ -22,11 +22,20 @@ export default function NavBar() {
       <div
         className="cursor-pointer"
         onClick={() => {
+          const anchor = document.querySelector("#blog");
+          anchor.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <p className="mr-14">03. Blog</p>
+      </div>
+      <div
+        className="cursor-pointer"
+        onClick={() => {
           const anchor = document.querySelector("#contact");
           anchor.scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <p>03. Contact</p>
+        <p>04. Contact</p>
       </div>
     </nav>
   );

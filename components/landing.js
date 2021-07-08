@@ -16,7 +16,7 @@ export default function Landing() {
             animate={{
               y: ["2%", "-2%"],
             }}
-            transition={{ yoyo: Infinity, duration: 3 }}
+            transition={{ repeat: Infinity, duration: 3, repeatType: "reverse" }}
           >
             <Image src="/computer_image.svg" alt="" height={643} width={680} />
           </motion.div>

@@ -41,8 +41,8 @@ export default function Projects() {
           title="PetCode"
           description={[
             "PetCode is a pet management system that takes the stress out of pet ownership by allowing owners to centralize their pet's data. With PetCode, managing pet's health, social needs, and safety has never been easier.",
-            <br />,
-            <br />,
+            <br key="br1"/>,
+            <br key="br2"/>,
             "I developed the mobile app, focusing on integrating Firebase, our GraphQL API, and in app purchases for both iOS and Android.",
           ]}
           tech={["Flutter", "Firebase", "GraphQL", "Maps API"]}
@@ -58,6 +58,7 @@ export default function Projects() {
           ]}
           colorFrom="78,84,200"
           colorTo="143,148,251"
+          key="PetCode"
         ></ProjectDiv>
         <ProjectDiv
           photo="https://ik.imagekit.io/samuelyuan/capsule_map_image_XK4JUfZIu.png"
@@ -72,6 +73,7 @@ export default function Projects() {
           ]}
           colorFrom="0,130,200"
           colorTo="102,125,182"
+          key="CapsuleMap"
         ></ProjectDiv>
         <ProjectDiv
           photo="https://ik.imagekit.io/samuelyuan/vs_code_github_projects_image_c0zTLqDm8.jpg"
@@ -90,6 +92,7 @@ export default function Projects() {
           ]}
           colorFrom="74,194,154"
           colorTo="189,255,243"
+          key="VS Code GitHub Projects"
         ></ProjectDiv>
       </motion.div>
     </div>
@@ -117,9 +120,9 @@ function ProjectDiv({
     // }
   }, [controls, inView]);
 
-  function getTechList(tech) {
-    return tech.map((name, index) => (
-      <p key={name + index} className="mr-5 text-white">
+  function getTechList(project, tech) {
+    return tech.map((name) => (
+      <p key={name + project} className="mr-5 text-white">
         {name}
       </p>
     ));
@@ -138,9 +141,9 @@ function ProjectDiv({
   return (
     <motion.div
       ref={ref}
-      className="w-full rounded-xl flex flex-col md:flex-row md:justify-between my-8 text-white max-h-76"
+      className="w-full rounded-xl flex flex-col md:flex-row md:justify-between my-8 text-white max-h-80"
       style={{
-        background: `linear-gradient(90deg, rgba(${colorFrom},1) 0%, rgba(${colorTo},0.33) 100%);`,
+        background: `linear-gradient(90deg, rgba(${colorFrom},1) 0%, rgba(${colorTo},0.33) 100%)`,
       }}
       variants={item}
       initial="hidden"
@@ -159,14 +162,14 @@ function ProjectDiv({
           {description}
         </p>
         {tech ? (
-          <ProjectTechnologies>{getTechList(tech)}</ProjectTechnologies>
+          <ProjectTechnologies>{getTechList(title, tech)}</ProjectTechnologies>
         ) : (
           <div></div>
         )}
       </div>
-      <img
+      <motion.img
         src={photo}
-        className="rounded-md object-cover max-h-full max-w-full -z-1"
+        className="rounded-tr-md rounded-br-md object-cover max-h-full max-w-full -z-1"
         alt="Project Image"
       />
     </motion.div>
@@ -190,7 +193,7 @@ function ProjectLink({ type, link }) {
     }
   }
   return (
-    <div className="mr-5">
+    <div className="mr-5 hover:-translate-y-0.5">
       <a href={link} target="_blank" rel="noreferrer">
         <Image src={getIcon()} width={30} height={30} alt={type + " Icon"} />
       </a>
