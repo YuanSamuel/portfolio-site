@@ -19,7 +19,15 @@ export default function NavBar() {
       >
         <p className="mr-14">02. Projects</p>
       </div>
-      <p>03. Contact</p>
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          const anchor = document.querySelector("#contact");
+          anchor.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <p>03. Contact</p>
+      </div>
     </nav>
   );
 }

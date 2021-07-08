@@ -42,6 +42,8 @@ module.exports = {
       minHeight: {
         "30vh": "30vh",
         "40vh": "40vh",
+        "60vh": "60vh",
+        "26rem": "26rem",
       },
       borderWidth: {
         1: "1px",

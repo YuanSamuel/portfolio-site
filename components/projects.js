@@ -21,7 +21,7 @@ const item = {
 export default function Projects() {
   return (
     <div
-      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen"
+      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen mb-12"
       id="projects"
     >
       <div className="mt-20 w-full flex flex-row items-center">
