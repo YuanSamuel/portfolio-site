@@ -22,7 +22,7 @@ export default function Contact() {
           href="https://github.com/YuanSamuel/"
           target="_blank"
           rel="noreferrer"
-          className="mx-4"
+          className="mx-4 hover:-translate-y-0.5"
         >
           <Image
             src="/github_icon_dark.png"
@@ -36,7 +36,7 @@ export default function Contact() {
           href="https://devpost.com/YuanSamuel"
           target="_blank"
           rel="noreferrer"
-          className="mx-4"
+          className="mx-4 hover:-translate-y-0.5"
         >
           <Image
             src="/devpost_icon.png"
@@ -50,7 +50,7 @@ export default function Contact() {
           href="mailto:syuan@utexas.edu"
           target="_blank"
           rel="noreferrer"
-          className="mx-4"
+          className="mx-4 hover:-translate-y-0.5"
         >
           <Image
             src="/email_icon.svg"
@@ -64,7 +64,7 @@ export default function Contact() {
           href="https://www.instagram.com/samuel.yuan17/"
           target="_blank"
           rel="noreferrer"
-          className="mx-4"
+          className="mx-4 hover:-translate-y-0.5"
         >
           <Image
             src="/instagram_icon.png"
@@ -79,7 +79,7 @@ export default function Contact() {
         href="mailto:syuan@utexas.edu"
         target="_blank"
         rel="noreferrer"
-        className="mt-6"
+        className="mt-6 hover:text-blue-500"
       >
         <h2 className="text-2xl">syuan@utexas.edu</h2>
       </a>
