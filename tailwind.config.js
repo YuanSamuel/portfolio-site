@@ -49,9 +49,6 @@ module.exports = {
         1: "1px",
         "40vh": "40vh",
       },
-      backgroundImage: (theme) => ({
-        "landing-gradient": "url('/landing_gradient.svg')",
-      }),
       fontSize: {
         "2.5xl": "1.6rem",
       },

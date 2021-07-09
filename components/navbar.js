@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <nav className="absolute top-6 right-8 flex items-center font-cousine text-lg">
+    <nav className="absolute top-6 right-4 items-center font-cousine md:text-lg hidden sm:flex">
       <div
         className="cursor-pointer"
         onClick={() => {
