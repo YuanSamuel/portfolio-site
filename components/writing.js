@@ -1,10 +1,14 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Writing({ posts }) {
+  const [seeFull, setSeeFull] = useState(false);
+
   const colorsFrom = ["235,51,73", "255,153,102", "248,181,0"];
   const colorsTo = ["244,92,67", "255,94,98", "252,234,187"];
-  console.log(posts);
 
+  const shownPosts = seeFull ? posts : posts.slice(0, 3);
+  
   return (
     <div
       className="flex flex-col justify-start items-center px-20 lg:w-10/12 mb-12"
@@ -16,8 +20,8 @@ export default function Writing({ posts }) {
         </h1>
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
-      <div className="flex flex-row w-full justify-around items-center mb-6">
-        {posts.map((post, index) => {
+      <div className="grid grid-cols-3 mb-6 justify-center gap-16">
+        {shownPosts.map((post, index) => {
           const { frontmatter, slug } = post;
           const { description, title, image } = frontmatter;
           return (
@@ -33,8 +37,13 @@ export default function Writing({ posts }) {
           );
         })}
       </div>
-      <div className="w-full mr-24">
-        <p className="text-blue-500 text-right text-lg font-light">See more</p>
+      <div className="">
+        <p
+          className="text-blue-500 text-right text-lg font-light hover:cursor-pointer"
+          onClick={() => setSeeFull(!seeFull)}
+        >
+          {seeFull ? "Hide" : "Expand"}
+        </p>
       </div>
     </div>
   );
