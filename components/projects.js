@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Button from "@material-ui/core/Button";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
@@ -21,7 +20,7 @@ const item = {
 export default function Projects() {
   return (
     <div
-      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen mb-12"
+      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen mb-20"
       id="projects"
     >
       <div className="mt-20 w-full flex flex-row items-center">

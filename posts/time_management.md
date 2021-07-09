@@ -2,6 +2,7 @@
 title: 'Time Management'
 description: 'Making the most of 24 hours'
 date: 30 June 2021
+image: 'https://ik.imagekit.io/samuelyuan/writing_images/time-2980690_1920_1__d_vWyineC.jpg'
 ---
 
 ## Time Management
