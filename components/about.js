@@ -68,7 +68,7 @@ export default function About() {
       </div>
       <div className="w-full mt-10 md:ml-7">
         <h2 className="text-2xl text-left">I've Worked With</h2>
-        <div className="flex flex-row mt-5 mb-5">
+        <div className="grid grid-cols-3 md:grid-cols-6 justify-start gap-10 md:gap-6 mt-5 mb-5 auto-cols-fr items-start">
           <div className="mr-5">
             <Image
               src="/flutter_logo.svg"
@@ -83,7 +83,6 @@ export default function About() {
               alt="Firebase Logo"
               width={100}
               height={100}
-              className="mr-10"
             />
           </div>
           <div className="mr-5">
@@ -92,7 +91,6 @@ export default function About() {
               alt="GraphQL Logo"
               width={100}
               height={100}
-              className="mr-10"
             />
           </div>
           <div className="mr-5">
@@ -101,7 +99,6 @@ export default function About() {
               alt="Tailwind CSS Logo"
               width={100}
               height={100}
-              className="mr-10"
             />
           </div>
           <div className="mr-5">
@@ -110,7 +107,6 @@ export default function About() {
               alt="GCP Logo"
               width={100}
               height={100}
-              className="mr-10"
             />
           </div>
           <div className="mr-5">
@@ -119,7 +115,6 @@ export default function About() {
               alt="Figma Logo"
               width={100}
               height={100}
-              className="mr-10"
             />
           </div>
         </div>
