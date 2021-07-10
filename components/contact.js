@@ -6,7 +6,7 @@ export default function Contact() {
       className="flex flex-col justify-start items-center px-14 w-full lg:w-10/12 min-h-26rem"
       id="contact"
     >
-      <div className="mt-20 w-full flex flex-row items-center">
+      <div className="mt-14 md:mt-20 w-full flex flex-row items-center">
         <div className="border-b-1 border-gray-400 h-0 w-full flex flex-shrink">
           {" "}
         </div>
