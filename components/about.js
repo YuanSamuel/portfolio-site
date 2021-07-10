@@ -68,7 +68,7 @@ export default function About() {
       </div>
       <div className="w-full mt-10 md:ml-7">
         <h2 className="text-2xl text-left">I've Worked With</h2>
-        <div className="grid grid-cols-3 md:grid-cols-6 justify-start gap-10 md:gap-6 mt-5 mb-5 auto-cols-fr items-start">
+        <div className="grid grid-cols-3 md:grid-cols-6 justify-start gap-10 md:gap-6 mt-5 mb-5">
           <div className="mr-5">
             <Image
               src="/flutter_logo.svg"
