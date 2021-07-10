@@ -17,10 +17,10 @@ export default function Home({ posts }) {
       </Head>
       <main className="flex flex-col items-center justify-center w-full">
         <Landing />
-        {/* <About />
+        <About />
         <Projects />
         <Writing posts={posts} />
-        <Contact /> */}
+        <Contact />
       </main>
     </div>
   );

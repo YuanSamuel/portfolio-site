@@ -2,14 +2,17 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-start items-center px-20 lg:w-10/12 mb-20" id='about'>
-      <div className="mt-40 w-full flex flex-row items-center">
+    <div
+      className="flex flex-col justify-start items-center w-full px-12 lg:w-10/12 mb-14 lg:mb-20"
+      id="about"
+    >
+      <div className="mt-28 lg:mt-40 w-full flex flex-row items-center">
         <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
           About
         </h1>
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row justify-start items-center md:items-start w-full mt-10">
+      <div className="flex flex-col md:flex-row justify-start items-center md:items-start w-full mt-10">
         <Image
           src="/profile_image.png"
           alt="Samuel Yuan"
@@ -17,7 +20,7 @@ export default function About() {
           height={320}
           className="flex flex-auto"
         />
-        <div className="flex flex-auto mb-5 md:m-0 md:ml-14 md:w-7/12 md:mt-4">
+        <div className="flex flex-auto mt-10 md:m-0 md:ml-14 md:w-7/12 md:mt-4">
           <p className="md:text-lg">
             Hi! My name is Samuel and I'm passionate about turning ideas into
             reality through software. Currently, I'm a rising{" "}
@@ -63,8 +66,8 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="w-full mt-10 ml-7">
-        <h2 className="text-xl md:text-2xl text-left">I've Worked With</h2>
+      <div className="w-full mt-10 md:ml-7">
+        <h2 className="text-2xl text-left">I've Worked With</h2>
         <div className="flex flex-row mt-5 mb-5">
           <div className="mr-5">
             <Image

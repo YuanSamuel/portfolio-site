@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <div
-      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-26rem"
+      className="flex flex-col justify-start items-center px-14 w-full lg:w-10/12 min-h-26rem"
       id="contact"
     >
       <div className="mt-20 w-full flex flex-row items-center">

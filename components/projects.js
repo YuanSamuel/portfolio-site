@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const projects = {
   hidden: { opacity: 0, x: -100 },
@@ -20,10 +21,10 @@ const item = {
 export default function Projects() {
   return (
     <div
-      className="flex flex-col justify-start items-center px-20 lg:w-10/12 min-h-screen mb-20"
+      className="flex flex-col justify-start items-center w-full px-12 lg:w-10/12 mb-20"
       id="projects"
     >
-      <div className="mt-20 w-full flex flex-row items-center">
+      <div className="mt-14 lg:mt-20 w-full flex flex-row items-center">
         <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
           Projects
         </h1>
@@ -40,8 +41,8 @@ export default function Projects() {
           title="PetCode"
           description={[
             "PetCode is a pet management system that takes the stress out of pet ownership by allowing owners to centralize their pet's data. With PetCode, managing pet's health, social needs, and safety has never been easier.",
-            <br key="br1"/>,
-            <br key="br2"/>,
+            <br key="br1" />,
+            <br key="br2" />,
             "I developed the mobile app, focusing on integrating Firebase, our GraphQL API, and in app purchases for both iOS and Android.",
           ]}
           tech={["Flutter", "Firebase", "GraphQL", "Maps API"]}
@@ -110,6 +111,8 @@ function ProjectDiv({
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
+  const isLg = useMediaQuery("(min-width:1024px)");
+
   useEffect(() => {
     if (inView) {
       controls.start("show");
@@ -140,35 +143,41 @@ function ProjectDiv({
   return (
     <motion.div
       ref={ref}
-      className="w-full rounded-xl flex flex-col md:flex-row md:justify-between my-8 text-white max-h-80"
+      className="w-full rounded-xl flex flex-col-reverse lg:flex-row lg:justify-between my-8 text-white xl:max-h-96 2xl:max-h-80"
       style={{
-        background: `linear-gradient(90deg, rgba(${colorFrom},1) 0%, rgba(${colorTo},0.33) 100%)`,
+        background: `linear-gradient(${
+          isLg ? "90" : "0"
+        }deg, rgba(${colorFrom},1) 0%, rgba(${colorTo},0.33) 100%)`,
       }}
       variants={item}
       initial="hidden"
       animate={controls}
     >
-      <div className="text-left my-8 mx-8 w-full items-center">
-        <div className="flex flex-row justify-between">
-          <h2 className="text-2xl mb-6">{title}</h2>
-          {links ? (
-            <ProjectLinks>{getLinksList(links)}</ProjectLinks>
+      <div className="text-left my-8 px-8 w-full items-center">
+        <div className="relative">
+          <div className="flex flex-row justify-between">
+            <h2 className="text-2xl mb-6">{title}</h2>
+            {links ? (
+              <ProjectLinks>{getLinksList(links)}</ProjectLinks>
+            ) : (
+              <div></div>
+            )}
+          </div>
+          <p className="text-sm md:text-base mb-6 whitespace-pre-wrap font-light">
+            {description}
+          </p>
+          {tech ? (
+            <ProjectTechnologies>
+              {getTechList(title, tech)}
+            </ProjectTechnologies>
           ) : (
             <div></div>
           )}
         </div>
-        <p className="text-md mb-6 whitespace-pre-wrap font-light">
-          {description}
-        </p>
-        {tech ? (
-          <ProjectTechnologies>{getTechList(title, tech)}</ProjectTechnologies>
-        ) : (
-          <div></div>
-        )}
       </div>
       <motion.img
         src={photo}
-        className="rounded-tr-md rounded-br-md object-cover max-h-full max-w-full -z-1"
+        className="rounded-tr-xl rounded-tl-xl lg:rounded-tl-none lg:rounded-br-xl object-cover w-full max-h-72 lg:max-h-full lg:w-2/5 -z-1"
         alt="Project Image"
       />
     </motion.div>
@@ -176,7 +185,9 @@ function ProjectDiv({
 }
 
 function ProjectTechnologies({ children }) {
-  return <div className="flex flex-row mb-6">{children}</div>;
+  return (
+    <div className="text-sm md:text-base flex flex-row mb-6">{children}</div>
+  );
 }
 
 function ProjectLinks({ children }) {
