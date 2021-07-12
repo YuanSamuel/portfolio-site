@@ -136,6 +136,7 @@ function ProjectDiv({
         key={link["link"] + index}
         type={link["type"]}
         link={link["link"]}
+        last={index == links.length - 1}
       />
     ));
   }
@@ -156,7 +157,7 @@ function ProjectDiv({
       <div className="text-left my-8 px-8 w-full items-center">
         <div className="relative">
           <div className="flex flex-row justify-between">
-            <h2 className="text-2xl mb-6">{title}</h2>
+            <h2 className="text-2xl mb-6 flex-shrink mr-2">{title}</h2>
             {links ? (
               <ProjectLinks>{getLinksList(links)}</ProjectLinks>
             ) : (
@@ -194,7 +195,9 @@ function ProjectLinks({ children }) {
   return <div className="flex flex-row">{children}</div>;
 }
 
-function ProjectLink({ type, link }) {
+function ProjectLink({ type, link, last }) {
+  console.log(link);
+  console.log(last);
   function getIcon() {
     if (type === "GitHub") {
       return "/github_icon_light.png";
@@ -203,9 +206,9 @@ function ProjectLink({ type, link }) {
     }
   }
   return (
-    <div className="mr-5 hover:-translate-y-0.5">
+    <div className={`${last ? "mr-0" : "mr-5"} hover:-translate-y-0.5 flex-none`}>
       <a href={link} target="_blank" rel="noreferrer">
-        <Image src={getIcon()} width={30} height={30} alt={type + " Icon"} />
+        <motion.img src={getIcon()} width={30} height={30} alt={type + " Icon"} />
       </a>
     </div>
   );
