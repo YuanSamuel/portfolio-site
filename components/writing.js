@@ -73,7 +73,7 @@ function Post({ title, description, image, link, colorFrom, colorTo }) {
           />
         </div>
         <div className="flex flex-col flex-none mx-4 my-4 text-white">
-          <h2 className="text-xl flex flex-none mb-2 font-light">{title}</h2>
+          <h3 className="text-xl flex flex-none mb-2 font-light">{title}</h3>
           <p className="text-sm flex flex-none font-extralight">
             {description}
           </p>
