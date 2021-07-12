@@ -21,7 +21,7 @@ const item = {
 export default function Projects() {
   return (
     <div
-      className="flex flex-col justify-start items-center w-full px-12 lg:w-10/12 mb-14 md:mb-20"
+      className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-10/12 mb-14 md:mb-20"
       id="projects"
     >
       <div className="mt-14 md:mt-20 w-full flex flex-row items-center">
@@ -31,7 +31,7 @@ export default function Projects() {
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
       <motion.div
-        className="flex flex-col justify-start items-center min-h-screen px-8"
+        className="flex flex-col justify-start items-center min-h-screen md:px-8"
         // variants={projects}
         // initial="hidden"
         // animate="show"
@@ -186,7 +186,7 @@ function ProjectDiv({
 
 function ProjectTechnologies({ children }) {
   return (
-    <div className="text-sm md:text-base flex flex-row mb-6">{children}</div>
+    <div className="grid grid-cols-2 gap-2 text-sm md:text-base md:flex md:flex-row mb-6">{children}</div>
   );
 }
 

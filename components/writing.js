@@ -12,7 +12,7 @@ export default function Writing({ posts }) {
   
   return (
     <div
-      className="flex flex-col justify-start items-center w-full px-12 lg:w-10/12 mb-12 md:mb-20"
+      className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-10/12 mb-12 md:mb-20"
       id="writing"
     >
       <div className="mt-14 md:mt-20 w-full flex flex-row items-center mb-14">
