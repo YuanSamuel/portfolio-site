@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <meta name="description" content="Samuel Yuan's Portfolio Site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center justify-center w-full">
+      <main className="flex flex-col items-center justify-center w-screen">
         <Landing />
         <About />
         <Projects />

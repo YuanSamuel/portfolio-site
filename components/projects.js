@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
@@ -78,7 +77,12 @@ export default function Projects() {
         <ProjectDiv
           photo="https://ik.imagekit.io/samuelyuan/vs_code_github_projects_image_c0zTLqDm8.jpg"
           title="VS Code GitHub Projects"
-          description="A VS Code extension that brings GitHub's projects into VS Code."
+          description={[
+            "A VS Code extension that brings GitHub's projects into VS Code. Users can log into their GitHub accounts and view GitHub kanban boards across all their repositories. Functionalities such as dragging and dropping cards, archiving items, creating cards, and more are all available.",
+            <br key="br3" />,
+            <br key="br4" />,
+            "This extension has been on the on the weekly trending page of the Visual Studio Marketplace and has a total of 4000+ downloads.",
+          ]}
           tech={["Svelte", "VS Code API", "GraphQL", "GitHub API"]}
           links={[
             {
@@ -187,7 +191,9 @@ function ProjectDiv({
 
 function ProjectTechnologies({ children }) {
   return (
-    <div className="grid grid-cols-2 gap-2 text-sm md:text-base md:flex md:flex-row mb-6">{children}</div>
+    <div className="grid grid-cols-2 gap-2 text-sm md:text-base md:flex md:flex-row mb-6">
+      {children}
+    </div>
   );
 }
 
@@ -206,9 +212,16 @@ function ProjectLink({ type, link, last }) {
     }
   }
   return (
-    <div className={`${last ? "mr-0" : "mr-5"} hover:-translate-y-0.5 flex-none`}>
+    <div
+      className={`${last ? "mr-0" : "mr-5"} hover:-translate-y-0.5 flex-none`}
+    >
       <a href={link} target="_blank" rel="noreferrer">
-        <motion.img src={getIcon()} width={30} height={30} alt={type + " Icon"} />
+        <motion.img
+          src={getIcon()}
+          width={30}
+          height={30}
+          alt={type + " Icon"}
+        />
       </a>
     </div>
   );
