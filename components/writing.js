@@ -57,12 +57,12 @@ function Post({ title, description, image, link, colorFrom, colorTo }) {
   return (
     <a href={link} target="_blank" rel="noreferrer">
       <div
-        className="rounded-lg h-64 w-64 md:h-72 md:w-72 lg:h-64 lg:w-64 xl:h-72 xl:w-72 bg-gray-400 overflow-hidden relative flex flex-col justify-around"
+        className="rounded-lg h-64 w-64 sm:h-72 sm:w-72 lg:h-64 lg:w-64 xl:h-72 xl:w-72 bg-gray-400 overflow-hidden relative flex flex-col justify-around"
         style={{
           background: `linear-gradient(0deg, rgba(${colorFrom},1) 0%, rgba(${colorTo},0.33) 100%)`,
         }}
       >
-        <div className="flex flex-shrink w-64 md:w-72 lg:w-64 xl:w-72">
+        <div className="flex flex-shrink w-64 sm:w-72 lg:w-64 xl:w-72">
           <Image
             src={image}
             alt={title}

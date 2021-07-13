@@ -50,12 +50,12 @@ export default function NavBar() {
           <p>04. Contact</p>
         </div>
       </nav>
-      <div ref={node} className="sm:hidden">
+      {/* <div ref={node} className="sm:hidden">
         <FocusLock disabled={!open}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </FocusLock>
-      </div>
+      </div> */}
     </div>
   );
 }
