@@ -3,6 +3,7 @@ import Burger from "./burger";
 import Menu from "./menu";
 import { useRef } from "react";
 import { useOnClickOutside } from "../scripts/hooks";
+import FocusLock from "react-focus-lock";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -50,8 +51,10 @@ export default function NavBar() {
         </div>
       </nav>
       <div ref={node} className="sm:hidden">
-        <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
+        <FocusLock disabled={!open}>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </FocusLock>
       </div>
     </div>
   );

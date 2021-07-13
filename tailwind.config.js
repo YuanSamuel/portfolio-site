@@ -56,6 +56,9 @@ module.exports = {
         aboutOrange: "#F7971E",
         aboutYellow: "#FFD200",
       },
+      padding: {
+        0.5: "0.2rem",
+      },
     },
     fontFamily: {
       cousine: ["Cousine"],
