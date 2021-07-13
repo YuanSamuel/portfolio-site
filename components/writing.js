@@ -55,7 +55,7 @@ function Post({ title, description, image, link, colorFrom, colorTo }) {
   const isLg = useMediaQuery("(min-width:1024px)");
 
   return (
-    <a href={link} target="_blank" rel="noreferrer">
+    <a href={link} rel="noreferrer">
       <div
         className="rounded-lg h-64 w-64 sm:h-72 sm:w-72 lg:h-64 lg:w-64 xl:h-72 xl:w-72 bg-gray-400 overflow-hidden relative flex flex-col justify-around"
         style={{
