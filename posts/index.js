@@ -13,7 +13,7 @@ export const posts = () =>
       })
       .sort(
         (post1, post2) =>
-          new Date(post2.frontmatter.date) - new Date(post1.frontmatter.date)
+          new Date(post1.frontmatter.index) - new Date(post2.frontmatter.index)
       );
   })(require.context('./', true, /\.md$/));
 

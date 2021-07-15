@@ -3,6 +3,7 @@ title: 'Software Initiatives'
 description: 'Thoughts on my past programs'
 date: 2020
 image: 'https://ik.imagekit.io/samuelyuan/writing_images/shoes-1246691_1920_N7GgIzLS8.jpg'
+index: 2
 ---
 
 ### My Start

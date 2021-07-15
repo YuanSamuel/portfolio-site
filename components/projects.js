@@ -202,8 +202,6 @@ function ProjectLinks({ children }) {
 }
 
 function ProjectLink({ type, link, last }) {
-  console.log(link);
-  console.log(last);
   function getIcon() {
     if (type === "GitHub") {
       return "/github_icon_light.png";
