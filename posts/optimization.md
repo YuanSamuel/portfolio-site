@@ -1,5 +1,5 @@
 ---
-title: 'Optimizatoin'
+title: 'Optimization'
 description: 'Growth and CS'
 date: 2020
 image: 'https://ik.imagekit.io/samuelyuan/writing_images/laptop-2620118_1920_Cq583Hl697.jpg'
