@@ -23,7 +23,7 @@ export default function About() {
         <div className="flex flex-auto mt-10 md:m-0 md:ml-14 md:w-7/12 md:mt-4">
           <p className="md:text-lg">
             Hi! My name is Samuel and I'm passionate about turning ideas into
-            reality through software. Currently, I'm a rising{" "}
+            reality through software. Currently, I'm a{" "}
             <a
               href="https://csb.utexas.edu/"
               target="_blank"
