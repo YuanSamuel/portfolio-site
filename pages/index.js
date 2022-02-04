@@ -14,6 +14,7 @@ export default function Home({ posts }) {
         <title>Samuel Yuan</title>
         <meta name="description" content="Samuel Yuan's Portfolio Site" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="https://ik.imagekit.io/samuelyuan/Website_Preview_9UZVEzHGC6i.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643933086408" />
       </Head>
       <main className="flex flex-col items-center justify-center w-full">
         <Landing />
