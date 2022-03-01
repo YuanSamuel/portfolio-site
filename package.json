@@ -15,7 +15,7 @@
     "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.0.1",
-    "next": "latest",
+    "next": "^12.1.0",
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
