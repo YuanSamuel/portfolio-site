@@ -1,12 +1,10 @@
-import {posts} from '../posts'
-
 import Head from "next/head";
 import Landing from "../components/landing";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <div className="flex flex-col justify-center">
       <Head>
@@ -23,13 +21,4 @@ export default function Home({ posts }) {
       </main>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const postsData = posts();
-  return {
-    props: {
-      posts: postsData,
-    },
-  };
 }
