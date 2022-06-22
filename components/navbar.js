@@ -34,20 +34,11 @@ export default function NavBar() {
         <div
           className="cursor-pointer"
           onClick={() => {
-            const anchor = document.querySelector("#writing");
-            anchor.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <p className="mr-14">03. Writing</p>
-        </div>
-        <div
-          className="cursor-pointer"
-          onClick={() => {
             const anchor = document.querySelector("#contact");
             anchor.scrollIntoView({ behavior: "smooth" });
           }}
         >
-          <p>04. Contact</p>
+          <p>03. Contact</p>
         </div>
       </nav>
       {/* <div ref={node} className="sm:hidden">

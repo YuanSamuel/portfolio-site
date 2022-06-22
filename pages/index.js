@@ -5,7 +5,6 @@ import Landing from "../components/landing";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
-import Writing from "../components/writing";
 
 export default function Home({ posts }) {
   return (
@@ -20,7 +19,6 @@ export default function Home({ posts }) {
         <Landing />
         <About />
         <Projects />
-        <Writing posts={posts} />
         <Contact />
       </main>
     </div>
