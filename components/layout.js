@@ -10,14 +10,14 @@ export default function Layout({ children, pageTitle, pageDescription }) {
         <meta name="description" content={pageDescription} />
       </Head>
       <div className="flex flex-col min-h-screen">
-        <header className="w-full h-16 border-b border-blue-500 flex items-center justify-center">
+        <header className="w-full h-16 border-b border-indigo-200 flex items-center justify-center">
           <div className="w-11/12 md:w-full max-w-5xl flex flex-row justify-between mx-8">
-            <div className="text-2xl border-blue-500">
+            <div className="text-2xl font-light">
               <ActiveLink href="/">
                 <a>Samuel Yuan</a>
               </ActiveLink>
             </div>
-            <AppNav />
+            {/* <AppNav /> */}
           </div>
         </header>
         <main className="w-11/12 md:w-full max-w-5xl mx-auto my-8 flex-grow px-8">

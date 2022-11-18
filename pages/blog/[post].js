@@ -13,7 +13,7 @@ export default function Post({ frontmatter, body }) {
     <Layout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
       <div className='w-full'>
         <article className='prose max-w-none'>
-          <h1>{frontmatter.title}</h1>
+          <h1 className='font-medium'>{frontmatter.title}</h1>
           <p className='italic'>{frontmatter.date}</p>
           <ReactMarkdown
             children={body}
