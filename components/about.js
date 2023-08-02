@@ -22,8 +22,7 @@ export default function About() {
         />
         <div className="flex flex-auto mt-10 md:m-0 md:ml-14 md:w-7/12 md:mt-4">
           <p className="md:text-lg">
-            Hi! My name is Samuel and I'm passionate about turning ideas into
-            reality through software. Currently, I'm a{" "}
+            Hi! My name is Samuel, a{" "}
             <a
               href="https://csb.utexas.edu/"
               target="_blank"
@@ -32,21 +31,29 @@ export default function About() {
             >
               Texas CSB Honors
             </a>{" "}
-            student at UT Austin majoring in Computer Science and Business
+            student at UT Austin majoring in both Computer Science and Business
             honors.
             <br />
             <br />
-            I've been programming for ~4 years now and have had the opportunity
-            to work as a developer at{" "}
+            I've had the opportunity to work as a developer at{" "}
             <a
-              href="https://petcodeusa.com/"
+              href="https://roblox.com/"
               target="_blank"
               className="text-blue-600"
               rel="noreferrer"
             >
-              PetCode
-            </a>{" "}
-            and{" "}
+              Roblox
+            </a>
+            ,{" "}
+            <a
+              href="https://www.striveworks.com/"
+              target="_blank"
+              className="text-blue-600"
+              rel="noreferrer"
+            >
+              Striveworks
+            </a>
+            ,{" "}
             <a
               href="https://fellowship.mlh.io/"
               target="_blank"
@@ -55,7 +62,7 @@ export default function About() {
             >
               MLH Fellowship
             </a>
-            , gaining experience in working with a ton of different technologies
+            , and Otto, gaining experience in working with a ton of different technologies
             and meeting some amazing people.
             <br />
             <br />

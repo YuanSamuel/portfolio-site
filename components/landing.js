@@ -34,7 +34,7 @@ export default function Landing() {
             Hi, I&apos;m Samuel Yuan
           </h1>
           <p className="text-2xl sm:text-2.5xl font-cousine text-gray-300">
-            I&apos;m a software developer based in Texas
+            I&apos;m a developer based in Texas 🌵
           </p>
         </div>
       </div>
