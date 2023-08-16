@@ -7,7 +7,7 @@ export default function About() {
       className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-10/12 mb-14 lg:mb-20"
       id="about"
     >
-      <div className="mt-28 lg:mt-40 w-full flex flex-row items-center">
+      <div className="mt-14 lg:mt-40 w-full flex flex-row items-center">
         <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
           About
         </h1>
