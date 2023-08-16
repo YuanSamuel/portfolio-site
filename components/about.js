@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LogoGrid from "./logo_grid";
 
 export default function About() {
   return (
@@ -62,8 +63,8 @@ export default function About() {
             >
               MLH Fellowship
             </a>
-            , and Otto, gaining experience in working with a ton of different technologies
-            and meeting some amazing people.
+            , and Otto, gaining experience in working with a ton of different
+            technologies and meeting some amazing people.
             <br />
             <br />
             Finally, I love working with others—I've competed with friends in
@@ -74,57 +75,28 @@ export default function About() {
         </div>
       </div>
       <div className="w-full mt-10 md:ml-7">
-        <h2 className="text-2xl text-left">I've Worked With</h2>
-        <div className="grid grid-cols-3 md:grid-cols-6 justify-start gap-10 md:gap-6 mt-5 mb-5">
-          <div className="mr-5">
-            <Image
-              src="/flutter_logo.svg"
-              alt="Flutter SDK Logo"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="mr-5">
-            <Image
-              src="/firebase_logo.svg"
-              alt="Firebase Logo"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="mr-5">
-            <Image
-              src="/graphql_logo.svg"
-              alt="GraphQL Logo"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="mr-5">
-            <Image
-              src="/tailwind_logo.svg"
-              alt="Tailwind CSS Logo"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="mr-5">
-            <Image
-              src="/gcp_logo.png"
-              alt="GCP Logo"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="mr-5">
-            <Image
-              src="/figma_logo.svg"
-              alt="Figma Logo"
-              width={100}
-              height={100}
-            />
-          </div>
-        </div>
+        <h2 className="text-2xl text-left">Programming Languages</h2>
+        <LogoGrid
+          logos={[
+            "/logos/golang_logo.svg",
+            "/logos/python_logo.svg",
+            "/logos/c_logo.svg",
+            "/logos/csharp_logo.svg",
+            "/logos/dart_logo.svg",
+            "/logos/javascript_logo.svg",
+          ]}
+        ></LogoGrid>
+        <h2 className="text-2xl text-left">Frameworks and Platforms</h2>
+        <LogoGrid
+          logos={[
+            "/logos/spark_logo.svg",
+            "/logos/pytorch_logo.svg",
+            "/logos/kubernetes_logo.svg",
+            "/logos/airflow_logo.png",
+            "/logos/flutter_logo.svg",
+            "/logos/pandas_logo.svg",
+          ]}
+        ></LogoGrid>
       </div>
     </div>
   );
