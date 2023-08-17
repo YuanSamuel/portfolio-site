@@ -17,11 +17,11 @@ export default function About() {
         <Image
           src="/profile_image.png"
           alt="Samuel Yuan"
-          width={340}
-          height={340}
+          width={230}
+          height={230}
           className="flex flex-auto"
         />
-        <div className="flex flex-auto md:m-0 md:ml-14 md:w-7/12">
+        <div className="flex flex-auto mt-10 md:mt-0 md:m-0 md:ml-14 md:w-7/12">
           <p className="md:text-lg">
             Hi! My name is Samuel, a
             {" "}
