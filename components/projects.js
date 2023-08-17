@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const projects = {
   hidden: { opacity: 0, x: -100 },

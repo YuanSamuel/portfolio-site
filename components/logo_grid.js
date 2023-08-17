@@ -11,7 +11,7 @@ export default function LogoGrid({ logos }) {
           <Image
             src={logo}
             alt={`Logo ${index + 1}`}
-            layout="fill"
+            fill
             objectFit="contain"
           />
         </div>

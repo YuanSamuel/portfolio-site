@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Writing({ posts }) {
   const [seeFull, setSeeFull] = useState(false);

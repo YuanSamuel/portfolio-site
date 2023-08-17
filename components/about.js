@@ -13,17 +13,27 @@ export default function About() {
         </h1>
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-start items-center md:items-start w-full mt-10">
+      <div className="flex flex-col md:flex-row justify-start items-center w-full mt-10">
         <Image
           src="/profile_image.png"
           alt="Samuel Yuan"
-          width={320}
-          height={320}
+          width={340}
+          height={340}
           className="flex flex-auto"
         />
-        <div className="flex flex-auto mt-10 md:m-0 md:ml-14 md:w-7/12 md:mt-4">
+        <div className="flex flex-auto md:m-0 md:ml-14 md:w-7/12">
           <p className="md:text-lg">
-            Hi! My name is Samuel, a{" "}
+            Hi! My name is Samuel, a
+            {" "}
+            <a
+              href="https://neo.com/"
+              target="_blank"
+              className="text-blue-600"
+              rel="noreferrer"
+            >
+              Neo Scholar Finalist
+            </a>{" "} and
+            {" "}
             <a
               href="https://csb.utexas.edu/"
               target="_blank"
@@ -32,11 +42,11 @@ export default function About() {
             >
               Texas CSB Honors
             </a>{" "}
-            student at UT Austin majoring in both Computer Science and Business
-            honors.
+            student at the University of Texas at Austin majoring in both
+            Computer Science and Business honors.
             <br />
             <br />
-            I've had the opportunity to work as a developer at{" "}
+            Over the 6 years I've been programming, I've have had the opportunity to work as a developer at{" "}
             <a
               href="https://roblox.com/"
               target="_blank"
@@ -63,19 +73,29 @@ export default function About() {
             >
               MLH Fellowship
             </a>
-            , and Otto, gaining experience in working with a ton of different
-            technologies and meeting some amazing people.
+            , and Otto. I specialize in machine learning, backend development,
+            and a little bit of design.
             <br />
             <br />
-            Finally, I love working with others—I've competed with friends in
+            I love CS because I love working with others—I've competed with friends in
             10+ hackathons, founded a software development club at my high
             school, and started a volunteer program at local junior highs to
             introduce younger students to programming.
+            <br />
+            <br />
+            Finally, outside of programming, you can find me playing bass, lifting, or completing the <a
+              href="https://www.nytimes.com/puzzles/leaderboards/invite/38a5751f-b700-43eb-8d7e-22653294c72a"
+              target="_blank"
+              className="text-blue-600"
+              rel="noreferrer"
+            >
+              NYT Mini Crossword
+            </a>.
           </p>
         </div>
       </div>
       <div className="w-full mt-10 md:ml-7">
-        <h2 className="text-2xl text-left">Programming Languages</h2>
+        <h2 className="text-2xl text-left text-gray-500">Programming Languages</h2>
         <LogoGrid
           logos={[
             "/logos/golang_logo.svg",
@@ -86,7 +106,7 @@ export default function About() {
             "/logos/javascript_logo.svg",
           ]}
         ></LogoGrid>
-        <h2 className="text-2xl text-left">Frameworks and Platforms</h2>
+        <h2 className="text-2xl text-left mt-10 text-gray-500">Frameworks and Platforms</h2>
         <LogoGrid
           logos={[
             "/logos/spark_logo.svg",
