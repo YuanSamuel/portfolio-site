@@ -3,6 +3,7 @@ import Landing from "../components/landing";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
+import Experience from "../components/experience";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center w-full">
         <Landing />
         <About />
+        <Experience />
         <Projects />
         <Contact />
       </main>

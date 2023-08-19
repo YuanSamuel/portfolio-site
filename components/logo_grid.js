@@ -12,7 +12,9 @@ export default function LogoGrid({ logos }) {
             src={logo}
             alt={`Logo ${index + 1}`}
             fill
-            objectFit="contain"
+            style={{
+              objectFit: "contain",
+            }}
           />
         </div>
       ))}
