@@ -57,39 +57,40 @@ export default function Experience() {
 
   return (
     <div
-      className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-7/12 mb-14 lg:mb-20"
+      className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-4/5 xl:w-7/12 mb-14 lg:mb-20"
       id="experience"
     >
-      <div className="mt-14 lg:mt-40 w-full flex flex-row items-center">
+      <div className="mt-14 lg:mt-20 w-full flex flex-row items-center">
         <h1 className="text-5xl m-0 leading-normal font-light text-left mr-8">
           Experience
         </h1>
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
       <div className="flex flex-col md:flex-row justify-start items-center w-full mt-10">
-        <div className="w-1/4 relative z-0 list-none">
-          {tabs.map((tab, index) => (
-            <li
-              key={tab.id}
-              onClick={() => setActiveTab(index)}
-              className={`cursor-pointer pl-4 border-l-2 h-12 flex items-center w-full ${
-                activeTab === index
-                  ? "text-blue-500 bg-gray-100"
-                  : "hover:bg-gray-100"
-              }`}
-            >
-              {tab.label}
-            </li>
-          ))}
-          <div
-            className="bg-blue-500 absolute top-0 left-0 transition-transform duration-300 z-10 w-0.5 h-12"
-            style={{
-              width: "4px",
-              transform: `translateY(${3 * activeTab}rem)`,
-            }}
-          />
-        </div>
-        <div className="w-3/4 p-4 space-y-2">
+      <div className="hidden md:flex flex-col w-1/4 relative z-0 list-none">
+        {tabs.map((tab, index) => (
+          <li
+            key={tab.id}
+            onClick={() => setActiveTab(index)}
+            className={`cursor-pointer pl-4 border-l-2 h-12 flex items-center w-full ${
+              activeTab === index
+                ? "text-blue-500 bg-gray-100"
+                : "hover:bg-gray-100"
+            }`}
+          >
+            {tab.label}
+          </li>
+        ))}
+        <div
+          className="hidden md:inline bg-blue-500 absolute top-0 left-0 transition-transform duration-300 z-10 w-0.5 h-12"
+          style={{
+            width: "4px",
+            transform: `translateY(${3 * activeTab}rem)`,
+          }}
+        />
+      </div>
+        <HorizontalTabBar />
+        <div className="w-full lg:w-3/4 p-4 space-y-2">
           <p className="text-2xl">
             {tabs[activeTab].role}{" "}
             <span className="text-blue-500">
@@ -115,4 +116,24 @@ export default function Experience() {
       </div>
     </div>
   );
+
+  function HorizontalTabBar() {
+    return (
+      <div className="flex flex-row md:hidden w-full relative z-0 list-none">
+        {tabs.map((tab, index) => (
+          <li
+            key={tab.id}
+            onClick={() => setActiveTab(index)}
+            className={`cursor-pointer border-b-2 h-12 flex items-center w-full justify-center ${
+              activeTab === index
+                ? "text-blue-500 bg-gray-100 border-blue-500"
+                : "hover:bg-gray-100"
+            }`}
+          >
+            {tab.label}
+          </li>
+        ))}
+      </div>
+    );
+  }
 }
