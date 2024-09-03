@@ -4,6 +4,32 @@ export default function Experience() {
   const [activeTab, setActiveTab] = useState(0);
   const tabs = [
     {
+      id: "research",
+      label: "UT Machine Learning Labs",
+      time: "November 2023 - Present",
+      role: "Undergraduate Researcher",
+      points: [
+        "Lead effort to jointly learn decisions for distinct OS components to predict better scheduling and resource allocation policies",
+        "Formulate contrastive learning encoder model to learn representations of OS system traces, e.g. CPU and cache features",
+        "Applied Momentum Contrast encoder model to ESM2 LLM embeddings to detect residue-level protein sequence similarity",
+        "Implemented Triplet model with InfoNCE loss to compare training with mined positive and negative pairs to MoCo model",
+        "Integrated PyTorch models with preprocessed MSA dataset and evaluate similarity of aligned and non-aligned residues",
+      ],
+      url: "https://www.ifml.institute/",
+    },
+    {
+      id: "databricks",
+      label: "Databricks",
+      time: "May 2024 - Aug 2024",
+      role: "Software Engineering Intern",
+      points: [
+        "Spearheaded TCP/HTTPS networking connectivity prober service to monitor health of 550+ critical cloud resources globally",
+        "Established multitenant thread pool/worker model to efficiently schedule and execute 35K+ probes hourly across all shards",
+        "Implemented dynamic self-onboarding schema and CLI with customizable Prometheus alerting and routing per probe",
+      ],
+      url: "https://www.databricks.com/",
+    },
+    {
       id: "roblox",
       label: "Roblox",
       time: "May 2023 - Aug 2023",
@@ -40,24 +66,11 @@ export default function Experience() {
         "Generated $100+ in yearly recurring revenue by implementing paid in-app subscription system with premium features",
       ],
     },
-    {
-      id: "mlh",
-      label: "MLH Fellowship",
-      time: "Feb 2021 - Apr 2021",
-      role: "Explorer Fellow",
-      points: [
-        "Engineered four different open-source projects over 12 weeks with new technologies such as Svelte and Unity",
-        "Deployed open-source VS Code extension providing interface for GitHub Projects with 13,000+ total downloads",
-        "Delivered hour-long instructional workshop on GraphQL to about 10 team members",
-        "Built Express.js API hosted on Microsoft Azure connect React.js frontend website with Hyperledger Fabric backend",
-      ],
-      url: "https://fellowship.mlh.io/",
-    },
   ];
 
   return (
     <div
-      className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-4/5 xl:w-7/12 mb-14 lg:mb-20"
+      className="flex flex-col justify-start items-center w-full px-8 md:px-12 lg:w-4/5 xl:w-10/12 mb-14 lg:mb-20"
       id="experience"
     >
       <div className="mt-14 lg:mt-20 w-full flex flex-row items-center">
@@ -67,28 +80,28 @@ export default function Experience() {
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
       <div className="flex flex-col md:flex-row justify-start items-center w-full mt-10">
-      <div className="hidden md:flex flex-col w-1/4 relative z-0 list-none">
-        {tabs.map((tab, index) => (
-          <li
-            key={tab.id}
-            onClick={() => setActiveTab(index)}
-            className={`cursor-pointer pl-4 border-l-2 h-12 flex items-center w-full ${
-              activeTab === index
-                ? "text-blue-500 bg-gray-100"
-                : "hover:bg-gray-100"
-            }`}
-          >
-            {tab.label}
-          </li>
-        ))}
-        <div
-          className="hidden md:inline bg-blue-500 absolute top-0 left-0 transition-transform duration-300 z-10 w-0.5 h-12"
-          style={{
-            width: "4px",
-            transform: `translateY(${3 * activeTab}rem)`,
-          }}
-        />
-      </div>
+        <div className="hidden md:flex flex-col w-1/4 relative z-0 list-none">
+          {tabs.map((tab, index) => (
+            <li
+              key={tab.id}
+              onClick={() => setActiveTab(index)}
+              className={`cursor-pointer pl-4 border-l-2 h-12 flex items-center w-full ${
+                activeTab === index
+                  ? "text-blue-500 bg-gray-100"
+                  : "hover:bg-gray-100"
+              }`}
+            >
+              {tab.label}
+            </li>
+          ))}
+          <div
+            className="hidden md:inline bg-blue-500 absolute top-0 left-0 transition-transform duration-300 z-10 w-0.5 h-12"
+            style={{
+              width: "4px",
+              transform: `translateY(${3 * activeTab}rem)`,
+            }}
+          />
+        </div>
         <HorizontalTabBar />
         <div className="w-full lg:w-3/4 p-4 space-y-2">
           <p className="text-2xl">

@@ -23,8 +23,7 @@ export default function About() {
         />
         <div className="flex flex-auto mt-10 md:mt-0 md:m-0 md:ml-14 md:w-7/12">
           <p className="md:text-lg">
-            Hi! My name is Samuel, a
-            {" "}
+            Hi! My name is Samuel, a{" "}
             <a
               href="https://neo.com/"
               target="_blank"
@@ -32,8 +31,8 @@ export default function About() {
               rel="noreferrer"
             >
               Neo Scholar Finalist
-            </a>{" "} and
-            {" "}
+            </a>{" "}
+            and{" "}
             <a
               href="https://csb.utexas.edu/"
               target="_blank"
@@ -46,7 +45,17 @@ export default function About() {
             Computer Science and Business honors.
             <br />
             <br />
-            Over the 6 years I've been programming, I've have had the opportunity to work as a developer at{" "}
+            Over the 6 years I've been programming, I've have had the
+            opportunity to work as a developer at{" "}
+            <a
+              href="https://databricks.com/"
+              target="_blank"
+              className="text-blue-600"
+              rel="noreferrer"
+            >
+              Databricks
+            </a>
+            ,{" "}
             <a
               href="https://roblox.com/"
               target="_blank"
@@ -77,24 +86,46 @@ export default function About() {
             and a little bit of design.
             <br />
             <br />
-            I love CS because I love working with others—I've competed with friends in
-            10+ hackathons, founded a software development club at my high
-            school, and started a volunteer program at local junior highs to
-            introduce younger students to programming.
+            Currently, I'm involved with a few research projects at UT Austin
+            exploring the machine learning space in{" "}
+            <a
+              href="https://ldos.utexas.edu/"
+              target="_blank"
+              className="text-blue-600"
+              rel="noreferrer"
+            >
+              systems
+            </a>{" "}
+            and computational linguistics. For example, I'm leading a project
+            exploring the use of contrastive learning in the operating system to
+            jointly learn models to improve performance of the cache and
+            prefetcher.
             <br />
             <br />
-            Finally, outside of programming, you can find me playing bass, lifting, or completing the <a
+            Finally, outside of programming, you can find me playing bass,
+            lifting, or completing the{" "}
+            <a
               href="https://www.nytimes.com/puzzles/leaderboards/invite/38a5751f-b700-43eb-8d7e-22653294c72a"
               target="_blank"
               className="text-blue-600"
               rel="noreferrer"
             >
               NYT Mini Crossword
-            </a>.
+            </a>
+            . You can find my resume{" "}
+            <a
+              href="resume.pdf"
+              target="_blank"
+              className="text-blue-600 font-medium"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            .
           </p>
         </div>
       </div>
-      <div className="w-full mt-10 md:ml-7">
+      {/* <div className="w-full mt-10 md:ml-7">
         <h2 className="text-2xl text-left text-gray-500">Programming Languages</h2>
         <LogoGrid
           logos={[
@@ -117,7 +148,7 @@ export default function About() {
             "/logos/pandas_logo.svg",
           ]}
         ></LogoGrid>
-      </div>
+      </div> */}
     </div>
   );
 }
