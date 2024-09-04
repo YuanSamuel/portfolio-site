@@ -112,7 +112,8 @@ export default function About() {
             >
               NYT Mini Crossword
             </a>
-            . You can find my resume{" "}
+            . 
+            {/* You can find my resume{" "}
             <a
               href="resume.pdf"
               target="_blank"
@@ -121,7 +122,7 @@ export default function About() {
             >
               here
             </a>
-            .
+            . */}
           </p>
         </div>
       </div>
