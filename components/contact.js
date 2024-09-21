@@ -61,7 +61,7 @@ export default function Contact() {
           />
         </a>
         <a
-          href="https://www.instagram.com/samuel.yuan17/"
+          href="https://www.instagram.com/samyo.yuan/"
           target="_blank"
           rel="noreferrer"
           className="mx-4 hover:-translate-y-0.5"
