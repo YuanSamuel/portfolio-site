@@ -122,7 +122,9 @@ export default function Experience() {
           <p className="text-gray-500 text-lg">{tabs[activeTab].time}</p>
           <ul className="list-disc list-inside space-y-1">
             {tabs[activeTab].points.map((point) => (
-              <li className="text-gray-500 text-md">{point}</li>
+              <li key={point} className="text-gray-500 text-md">
+                {point}
+              </li>
             ))}
           </ul>
         </div>

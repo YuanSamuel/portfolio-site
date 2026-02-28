@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col justify-center">
       <Head>
         <title>Samuel Yuan</title>
-        <meta name="description" content="Samuel Yuan's Portfolio Site" />
+        <meta name="description" content="Samuel Yuan — software engineer focused on ML systems, backend engineering, and product-minded development." />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:image" content="https://ik.imagekit.io/samuelyuan/Website_Preview_9UZVEzHGC6i.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643933086408" />
       </Head>
