@@ -1,61 +1,32 @@
-import { useState } from "react";
-import Burger from "./burger";
-import Menu from "./menu";
-import { useRef } from "react";
-import { useOnClickOutside } from "../scripts/hooks";
-import FocusLock from "react-focus-lock";
+const navItems = [
+  { id: "about", label: "01. About" },
+  { id: "experience", label: "02. Experience" },
+  { id: "projects", label: "03. Projects" },
+  { id: "contact", label: "04. Contact" },
+];
 
 export default function NavBar() {
-  const [open, setOpen] = useState(false);
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
+  const scrollTo = (id) => {
+    const anchor = document.querySelector(`#${id}`);
+    if (anchor) anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
-    <div>
-      <nav className="absolute top-6 right-4 lg:right-8 items-center font-cousine md:text-lg hidden sm:flex">
-        <div
-          className="cursor-pointer"
-          onClick={() => {
-            const anchor = document.querySelector("#about");
-            anchor.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <p className="mr-14">01. About</p>
-        </div>
-        <div
-          className="cursor-pointer"
-          onClick={() => {
-            const anchor = document.querySelector("#experience");
-            anchor.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <p className="mr-14">02. Experience</p>
-        </div>
-        <div
-          className="cursor-pointer"
-          onClick={() => {
-            const anchor = document.querySelector("#projects");
-            anchor.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <p className="mr-14">03. Projects</p>
-        </div>
-        <div
-          className="cursor-pointer"
-          onClick={() => {
-            const anchor = document.querySelector("#contact");
-            anchor.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <p>04. Contact</p>
-        </div>
+    <header className="fixed top-0 z-50 w-full border-b border-white/40 bg-white/80 backdrop-blur">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-end overflow-x-auto px-4 py-3 font-cousine text-sm sm:text-base md:px-8">
+        {navItems.map((item, index) => (
+          <button
+            key={item.id}
+            type="button"
+            className={`cursor-pointer whitespace-nowrap transition hover:text-blue-600 ${
+              index !== navItems.length - 1 ? "mr-6 md:mr-10" : ""
+            }`}
+            onClick={() => scrollTo(item.id)}
+          >
+            {item.label}
+          </button>
+        ))}
       </nav>
-      {/* <div ref={node} className="sm:hidden">
-        <FocusLock disabled={!open}>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-        </FocusLock>
-      </div> */}
-    </div>
+    </header>
   );
 }

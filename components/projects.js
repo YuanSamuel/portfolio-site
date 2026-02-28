@@ -30,7 +30,7 @@ export default function Projects() {
         <div className="border-b-1 border-gray-400 h-0 w-full"> </div>
       </div>
       <motion.div
-        className="flex flex-col justify-start items-center min-h-screen md:px-8"
+        className="flex flex-col justify-start items-center md:px-8"
         // variants={projects}
         // initial="hidden"
         // animate="show"
